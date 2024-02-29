@@ -1,25 +1,23 @@
 .layout {
-  padding-top: 50px;
   display: grid;
-  padding: 15px;
+
   width: 90%;
   border-radius: 10px;
-  justify-items: flex-start;
+  padding: 40px 20px 0px 20px;
   background-color: rgb(0, 71, 75, 1);
   grid-template-rows: auto auto auto;
   gap: 50px;
   overflow: hidden;
 }
 .main {
-  padding-top: 50px;
+  padding: 40px 20px 0px 20px;
   display: grid;
+  width: 100%;
 
-  width: 90%;
   border-radius: 10px;
-
+  gap: 60px;
   background-color: rgb(0, 71, 75, 1);
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  grid-template-columns: auto auto;
 }
 
 .text {
@@ -38,8 +36,7 @@
   align-items: center;
   position: relative;
 
-  top: 50%;
-  bottom: 0;
+  top: 100%;
   width: 100%;
 
   border: none;
@@ -68,21 +65,19 @@
   letter-spacing: 0em;
   text-align: left;
 }
-@media only screen and (max-width: 414px) {
-  .layout {
-    width: 100%;
+@media only screen and (max-width: 1240px) {
+  .main {
+    padding-left: 20px;
   }
-  .billText {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 50px;
-    letter-spacing: 0em;
-    text-align: left;
+  .footer {
+    padding: 20px;
+    top: auto;
   }
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1080px) {
   .layout {
     width: 80%;
+    grid-template-rows: auto auto auto;
   }
   .billText {
     font-size: 30px;
@@ -92,13 +87,40 @@
     text-align: left;
   }
 }
+@media only screen and (max-width: 414px) {
+  .layout {
+    width: 100%;
+    grid-template-rows: auto auto auto;
+  }
+  .billText {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
 @media only screen and (max-width: 840px) {
   .layout {
-    width: 80%;
+    width: 100%;
+    grid-template-rows: auto auto auto;
   }
 }
 @media only screen and (max-width: 720px) {
   .layout {
     width: 100%;
+  }
+  .main {
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .billText {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 }

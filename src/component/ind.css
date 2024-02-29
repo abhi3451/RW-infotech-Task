@@ -27,3 +27,13 @@
     gap: 10px;
   }
 }
+@media only screen and (max-width: 720px) {
+  .container {
+    overflow-y: scroll;
+    width: 100%;
+  }
+  .gridContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
