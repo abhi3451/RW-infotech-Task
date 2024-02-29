@@ -1,8 +1,8 @@
 import React from "react";
 
-import BillCal from "./BillCal";
-import SelectTip from "./SelectTip";
-import NOP from "./NOP";
+import BillCal from "./Bill/BillCal";
+import SelectTip from "./Select/SelectTip";
+import NOP from "./NOP/NOP";
 
 const BillCalc = () => {
   return (

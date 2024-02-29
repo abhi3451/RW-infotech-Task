@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Total.css";
 
-import useBillContext from "../../store/BillCtx";
+import useBillContext from "../../../store/BillCtx";
 
 const Total = () => {
   const { Result, BillPer, TipPer, handleReset } = useBillContext();

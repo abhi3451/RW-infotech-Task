@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./BillTotal.css";
-import useBillContext from "../../store/BillCtx";
+import "./Select.css";
+import useBillContext from "../../../store/BillCtx";
 
 const tipValues = [5, 10, 15, 20, 30];
 const SelectTip = () => {

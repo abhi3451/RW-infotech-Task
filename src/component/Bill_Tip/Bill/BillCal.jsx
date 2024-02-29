@@ -1,6 +1,6 @@
 import React from "react";
-import "./BillTotal.css";
-import useBillContext from "../../store/BillCtx";
+import "./BilCal.css";
+import useBillContext from "../../../store/BillCtx";
 const BillCal = () => {
   const { Bill, setBill } = useBillContext();
   let length = 6;

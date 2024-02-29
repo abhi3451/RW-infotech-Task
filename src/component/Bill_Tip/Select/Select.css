@@ -1,0 +1,82 @@
+.texts {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: rgba(107, 119, 119, 1);
+}
+.customBox {
+  border-radius: 10px;
+
+  border: none;
+  background: rgba(243, 248, 251, 1);
+}
+
+.custom {
+  border: none;
+  border-radius: 10px;
+  background: rgba(243, 248, 251, 1);
+
+  color: black;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  direction: ltr;
+}
+.custom::placeholder {
+  color: rgba(0, 71, 75, 1);
+  font-weight: bolder;
+}
+.custom::-webkit-inner-spin-button,
+.custom::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom {
+  -moz-appearance: textfield;
+}
+/*----------------------------BIll----------------------------*/
+
+.tip {
+  display: grid;
+
+  grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+}
+.tip1 {
+  cursor: pointer;
+
+  background: rgba(0, 71, 75, 1);
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+}
+.tip1:hover {
+  background: rgb(0, 50, 53);
+}
+.tip1:focus {
+  background: rgb(0, 50, 53);
+  outline: 3px solid rgb(0, 87, 128);
+}
+@media only screen and (max-width: 1080px) {
+  .tip1 {
+    font-size: 20px;
+  }
+  .textB,
+  .texts {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .tip1 {
+    font-size: 10px;
+  }
+  .textB,
+  .texts {
+    font-size: 15px;
+  }
+}

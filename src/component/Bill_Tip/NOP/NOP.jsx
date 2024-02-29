@@ -1,7 +1,7 @@
 import React from "react";
-import "./BillTotal.css";
+import "./NOP.css";
 import { FaUser } from "react-icons/fa";
-import useBillContext from "../../store/BillCtx";
+import useBillContext from "../../../store/BillCtx";
 const NOP = () => {
   const { setNOP, NOP } = useBillContext();
   return (

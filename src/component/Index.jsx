@@ -1,6 +1,6 @@
 import React from "react";
-import BillCalc from "./Bill_Tip/BillTotal";
-import Total from "./Bill_Tip/Total";
+import BillCalc from "./Bill_Tip/Index";
+import Total from "./Bill_Tip/Total_Amount/Total";
 import "./ind.css";
 const Index = () => {
   return (
