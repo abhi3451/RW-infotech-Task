@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  width: 70%;
+
+  /* height: 80vh; */
+  background: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 5%;
+}
+@media only screen and (max-width: 1080px) {
+  .container {
+    overflow-y: scroll;
+  }
+  .gridContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}

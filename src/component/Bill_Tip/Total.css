@@ -1,0 +1,104 @@
+.layout {
+  padding-top: 50px;
+  display: grid;
+  padding: 15px;
+  width: 90%;
+  border-radius: 10px;
+  justify-items: flex-start;
+  background-color: rgb(0, 71, 75, 1);
+  grid-template-rows: auto auto auto;
+  gap: 50px;
+  overflow: hidden;
+}
+.main {
+  padding-top: 50px;
+  display: grid;
+
+  width: 90%;
+  border-radius: 10px;
+
+  background-color: rgb(0, 71, 75, 1);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.text {
+  font-size: 20px;
+  display: flex;
+
+  flex-direction: column;
+}
+.txt2 {
+  font-size: 14px;
+  color: rgba(100, 155, 160, 1);
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  top: 50%;
+  bottom: 0;
+  width: 100%;
+
+  border: none;
+  border-radius: 10px;
+  background: rgba(13, 104, 109, 1);
+  cursor: pointer;
+}
+.footer button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer:hover {
+  background: rgb(16, 94, 99);
+}
+.footer:active {
+  background: rgb(5, 53, 56);
+}
+
+.billText {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@media only screen and (max-width: 414px) {
+  .layout {
+    width: 100%;
+  }
+  .billText {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .layout {
+    width: 80%;
+  }
+  .billText {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .layout {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .layout {
+    width: 100%;
+  }
+}
