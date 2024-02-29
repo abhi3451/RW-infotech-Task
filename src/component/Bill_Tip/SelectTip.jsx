@@ -4,13 +4,19 @@ import useBillContext from "../../store/BillCtx";
 
 const tipValues = [5, 10, 15, 20, 30];
 const SelectTip = () => {
-  const { tipval, setTipval, setTip } = useBillContext();
+  const { Tip, tipval, setTipval, setTip } = useBillContext();
 
   const handleTip = (tip) => {
+    if (Tip) {
+      setTipval("");
+    }
     setTip(parseInt(tip));
   };
 
   const handleCustomTip = (e) => {
+    if (Tip) {
+      setTipval("");
+    }
     const customTipValue = e.target.value;
     if (customTipValue.length <= 3) {
       setTipval(parseInt(customTipValue));
