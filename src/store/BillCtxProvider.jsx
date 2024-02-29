@@ -9,7 +9,7 @@ const BillProvider = ({ children }) => {
   const [BillPer, setBillPer] = useState(0);
   const [TipPer, setTipPer] = useState(0);
   const [Result, setResult] = useState(0);
-
+  const [tipval, setTipval] = useState("");
   const parseBill = parseInt(Bill);
 
   const TipCalulate = (parseBill * Tip) / 100;
@@ -29,14 +29,15 @@ const BillProvider = ({ children }) => {
     setResult(0);
     setTipPer(0);
     setBillPer(0);
+    setTipval("");
   };
 
   useEffect(() => {
     if (parseBill && Tip && NOP > 0) {
-      const totalValue = debounce(() => {
+      const totalValue = () => {
         const TotalAmount = parseBill + TipCalulate;
         setResult(TotalAmount.toFixed(2));
-      }, 500);
+      };
       totalValue();
     }
   }, [Bill, Tip, NOP]);
@@ -70,6 +71,8 @@ const BillProvider = ({ children }) => {
     TipPer,
     BillPer,
     handleReset,
+    tipval,
+    setTipval,
   };
 
   return (

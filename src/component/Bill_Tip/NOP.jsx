@@ -3,7 +3,7 @@ import "./BillTotal.css";
 import { FaUser } from "react-icons/fa";
 import useBillContext from "../../store/BillCtx";
 const NOP = () => {
-  const { Bill, setNOP, NOP, setTip, setBill } = useBillContext();
+  const { setNOP, NOP } = useBillContext();
   return (
     <div>
       <div className="textB">
@@ -21,9 +21,9 @@ const NOP = () => {
           className="input"
           value={NOP}
           onChange={(e) => {
-            const value = e.target.value;
-            if (/^[0-9]*$/.test(value)) {
-              setNOP(value);
+            const Peoplevalue = e.target.value;
+            if (/^[0-9]*$/.test(Peoplevalue) && Peoplevalue.length <= 6) {
+              setNOP(Peoplevalue);
             }
           }}
         />

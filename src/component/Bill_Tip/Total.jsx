@@ -21,7 +21,9 @@ const Total = () => {
         <div className="billText">$ {BillPer.toFixed(2)}</div>
       </div>
       <div className="footer" onClick={handleReset}>
-        <button type="submit">Reset</button>
+        <button type="submit" disabled={!BillPer && !TipPer}>
+          Reset
+        </button>
       </div>
     </div>
   );

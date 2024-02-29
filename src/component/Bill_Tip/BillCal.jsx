@@ -2,7 +2,8 @@ import React from "react";
 import "./BillTotal.css";
 import useBillContext from "../../store/BillCtx";
 const BillCal = () => {
-  const { Bill, setNOP, NOP, setTip, setBill } = useBillContext();
+  const { Bill, setBill } = useBillContext();
+  let length = 6;
   return (
     <div className="bil">
       <div className="textB">Bill</div>
@@ -13,7 +14,12 @@ const BillCal = () => {
           placeholder="0"
           className="input"
           value={Bill}
-          onChange={(e) => setBill(e.target.value)}
+          onChange={(e) => {
+            const inputValue = e.target.value;
+            if (inputValue.length <= length) {
+              setBill(inputValue);
+            }
+          }}
         />
       </div>
     </div>

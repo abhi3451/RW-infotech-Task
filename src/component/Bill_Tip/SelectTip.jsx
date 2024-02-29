@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BillTotal.css";
 import useBillContext from "../../store/BillCtx";
 
 const tipValues = [5, 10, 15, 20, 30];
 const SelectTip = () => {
-  const { Bill, setNOP, NOP, setTip, setBill } = useBillContext();
+  const { tipval, setTipval, setTip } = useBillContext();
 
   const handleTip = (tip) => {
     setTip(parseInt(tip));
@@ -12,7 +12,10 @@ const SelectTip = () => {
 
   const handleCustomTip = (e) => {
     const customTipValue = e.target.value;
-    setTip(customTipValue ? parseInt(customTipValue) : 0);
+    if (customTipValue.length <= 3) {
+      setTipval(parseInt(customTipValue));
+      setTip(parseInt(customTipValue));
+    }
   };
   return (
     <div>
@@ -29,6 +32,7 @@ const SelectTip = () => {
             type="number"
             placeholder="Custom"
             className="custom"
+            value={tipval}
             onChange={handleCustomTip}
           />
         </span>
