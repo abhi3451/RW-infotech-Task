@@ -150,6 +150,7 @@ input:focus {
 }
 .error {
   color: red;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 1080px) {
