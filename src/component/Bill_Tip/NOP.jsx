@@ -1,5 +1,5 @@
 import React from "react";
-import "./BillCalc.css";
+import "./BillTotal.css";
 import { FaUser } from "react-icons/fa";
 import useBillContext from "../../store/BillCtx";
 const NOP = () => {

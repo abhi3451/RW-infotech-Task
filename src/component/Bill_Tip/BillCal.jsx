@@ -1,5 +1,5 @@
 import React from "react";
-import "./BillCalc.css";
+import "./BillTotal.css";
 import useBillContext from "../../store/BillCtx";
 const BillCal = () => {
   const { Bill, setNOP, NOP, setTip, setBill } = useBillContext();

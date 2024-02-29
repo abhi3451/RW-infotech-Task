@@ -1,5 +1,5 @@
 import React from "react";
-import BillCalc from "./Bill_Tip/BillCalc";
+import BillCalc from "./Bill_Tip/BillTotal";
 import Total from "./Bill_Tip/Total";
 import "./ind.css";
 const Index = () => {

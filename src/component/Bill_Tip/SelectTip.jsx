@@ -1,5 +1,5 @@
 import React from "react";
-import "./BillCalc.css";
+import "./BillTotal.css";
 import useBillContext from "../../store/BillCtx";
 
 const tipValues = [5, 10, 15, 20, 30];

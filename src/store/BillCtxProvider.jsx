@@ -42,22 +42,22 @@ const BillProvider = ({ children }) => {
   }, [Bill, Tip, NOP]);
 
   useEffect(() => {
-    const tipVal = debounce(() => {
+    const tipVal = () => {
       if (Tip && NOP > 0 && Bill) {
         handleSplitTip();
       }
-    }, 500);
+    };
     tipVal();
-  }, [Tip, NOP]);
+  }, [Tip, NOP, Bill]);
 
   useEffect(() => {
-    const billVal = debounce(() => {
+    const billVal = () => {
       if (Result && NOP > 0 && Bill) {
         handleBillSplit();
       }
-    }, 500);
+    };
     billVal();
-  }, [Result, NOP]);
+  }, [Result, NOP, Bill]);
 
   const contextValue = {
     Bill,
