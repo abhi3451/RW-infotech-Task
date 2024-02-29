@@ -18,7 +18,7 @@ const SelectTip = () => {
       setTipval("");
     }
     const customTipValue = e.target.value;
-    if (customTipValue.length <= 3) {
+    if (customTipValue.length <= 3 || customTipValue > 0) {
       setTipval(parseInt(customTipValue));
       setTip(parseInt(customTipValue));
     }

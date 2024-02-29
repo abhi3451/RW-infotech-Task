@@ -18,7 +18,9 @@ const BillProvider = ({ children }) => {
   };
 
   const handleBillSplit = () => {
-    setBillPer(Result / NOP);
+    if (NOP > 0) {
+      setBillPer(Result / NOP);
+    }
   };
 
   const handleReset = () => {
